@@ -95,9 +95,9 @@ def update_product(id):
 
 @app.route('/customer/<int:id>', methods=['GET'])
 def get_customer(id):
-    customer = Customer.query.get(id)  # Get the customer by ID
+    customer = Customer.query.get(id)  
     if customer:
-        # Return customer details in JSON format
+   
         return jsonify({
             'id': customer.id,
             'name': customer.name,
